@@ -1,4 +1,4 @@
-# travel
+# alta-vue
 
 ## Project setup
 ```
