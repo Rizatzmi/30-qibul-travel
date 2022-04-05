@@ -1,48 +1,57 @@
 <template>
   <header>
-    <div class="container">
-      <nav>
-        <a href="/">
-          <img src="../assets/logo.png" alt="Logo" width="30" />
-        </a>
-        <ul>
-          <li><router-link to="/">Home</router-link></li>
-          <li><a href="#">Blog</a></li>
-          <li><router-link to="/about">About</router-link></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
+    <div class="hero">
+      <div class="overlay"></div>
+      <div class="hero-text">
+        <p>Virginia, USA</p>
+        <h1>Mountain Lake</h1>
+        <v-btn
+          x-large
+          outlined
+          elevation="0"
+          color="#00A2CC"
+          style="color: white"
+          >Explore</v-btn
+        >
+      </div>
     </div>
   </header>
 </template>
 
 <script>
-export default {};
+export default {
+  components: {},
+};
 </script>
 
 <style scoped>
-header {
-  background: #787A91;
-  margin-bottom: 100px;
+.hero {
+  background-image: url("@/assets/hero.jpg");
+  background-size: cover;
+  background-position: top;
+  height: 100vh;
+  position: relative;
 }
 
-nav {
-  display: flex;
-  flex-direction: row;
-  min-height: 50px;
-  justify-content: flex-start;
-  align-items: center;
+.hero .hero-text {
+  position: absolute;
+  bottom: 15%;
+  left: 10%;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  color: white;
+.hero .hero-text h1 {
+  font-weight: 800;
+  font-size: 64px;
+  line-height: 75px;
+  color: #ffffff;
+  margin-bottom: 40px;
 }
 
-nav ul li {
-  margin: 2px 20px;
+.hero .hero-text p {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0.05em;
+  color: #ffffff;
 }
-
 </style>
